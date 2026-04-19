@@ -1,5 +1,5 @@
 [build]
-  publish = "Generador"
+  publish = "."
 
 [[redirects]]
   from = "/*"
