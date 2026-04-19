@@ -1,6 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "",
-  "buildCommand": "rm -rf Generador/assets && cp -R assets Generador/assets",
   "outputDirectory": "Generador"
 }
