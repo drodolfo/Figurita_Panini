@@ -387,12 +387,12 @@ document.getElementById('modalDownload').addEventListener('click', () => {
 });
 
 document.getElementById('shareTwitter').addEventListener('click', () => {
-    const txt = encodeURIComponent('¡Mirá mi figurita del Mundial 2026! 🌍⚽ Creá la tuya gratis en mundialhub.vercel.app #Mundial2026 #Figurita');
-    window.open(`https://twitter.com/intent/tweet?text=${txt}`, '_blank');
+    const txt = encodeURIComponent('¡Mirá mi figurita del Mundial 2026! 🌍⚽ Creá la tuya gratis en https://figurita-panini.vercel.app #Mundial2026 #Figurita');
+    window.open(`https://x.com/intent/tweet?text=${txt}`, '_blank');
 });
 
 document.getElementById('shareWhatsapp').addEventListener('click', () => {
-    const txt = encodeURIComponent('¡Mirá mi figurita del Mundial 2026! 🌍⚽ Creá la tuya gratis acá: https://mundialhub.vercel.app');
+    const txt = encodeURIComponent('¡Mirá mi figurita del Mundial 2026! 🌍⚽ Creá la tuya gratis acá: https://figurita-panini.vercel.app');
     window.open(`https://wa.me/?text=${txt}`, '_blank');
 });
 

@@ -901,6 +901,10 @@ header {
     box-sizing: border-box;
 }
 
+.main-footer a {
+    color: inherit;
+}
+
     .main-footer::before {
         content: '';
         position: absolute;
@@ -954,7 +958,7 @@ header {
 
 .btn-cafecito {
     background: var(--greenA);
-    color: var(--black);
+    color: #000 !important;
     border: 2px solid var(--greenA);
 }
 
