@@ -1,2 +1,28 @@
 [build]
-  publish = "."
+  command = "rm -rf Generador/assets && cp -R assets Generador/assets"
+  publish = "Generador"
+
+[[redirects]]
+  from = "/Generador"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/Generador/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/Generador/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/generador/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
