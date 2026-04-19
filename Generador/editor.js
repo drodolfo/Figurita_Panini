@@ -10,13 +10,12 @@ const ctx = canvas.getContext('2d');
 
 const customFont = new FontFace('FuentePersonalizada', 'url(../assets/fonts/fuente.otf)');
 const customFont2 = new FontFace('FuentePersonalizadaA', 'url(../assets/fonts/fuente2.ttf)');
-const customFont3 = new FontFace('FuentePersonalizadaAA', 'url(../assets/fonts/fuente3.ttf)');
-Promise.all([customFont.load(), customFont2.load(), customFont3.load()])
+Promise.all([customFont.load(), customFont2.load()])
     .then(fonts => { fonts.forEach(f => document.fonts.add(f)); draw(); })
     .catch(() => draw());
 
 const FONT_NOMBRE = '"FuentePersonalizadaA",  "Barlow Condensed", sans-serif';
-const FONT_RESTO = '"FuentePersonalizadaAA", "Barlow Condensed", sans-serif';
+const FONT_RESTO = '"FuentePersonalizadaA", "Barlow Condensed", sans-serif';
 const FONT_PAIS = '"FuentePersonalizada",   "Barlow Condensed", sans-serif';
 
 const GROUPS = {
