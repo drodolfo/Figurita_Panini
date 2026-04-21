@@ -412,41 +412,41 @@ document.getElementById('dlBtn').addEventListener('click', () => {
     a.click();
     openShareModal(dataUrl);
 });
-// ─────────────────────────────────────────────────────────────────
+// // ─────────────────────────────────────────────────────────────────
 
-// ── Carousel de tabs — muestra 2 a la vez ────────────────────────
-const TABS = [
-    { label: '2026',          sub: 'ACTIVO',      disabled: false },
-    { label: 'EXTRA STICKER', sub: 'COMING SOON', disabled: true  },
-    { label: '2022',          sub: 'COMING SOON', disabled: true  },
-];
-let currentTabIdx = 0;
-const VISIBLE = 2; // cuántos tabs se muestran a la vez
+// // ── Carousel de tabs — muestra 2 a la vez ────────────────────────
+// const TABS = [
+//     { label: '2026', sub: 'ACTIVO', disabled: false },
+//     // { label: 'EXTRA STICKER', sub: 'COMING SOON', disabled: true  },
+//     // { label: '2022',          sub: 'COMING SOON', disabled: true  },
+// ];
+// let currentTabIdx = 0;
+// const VISIBLE = 2; // cuántos tabs se muestran a la vez
 
-function renderTabs() {
-    const container = document.getElementById('wcTabsContainer');
-    const visible = TABS.slice(currentTabIdx, currentTabIdx + VISIBLE);
-    container.innerHTML = visible.map((t, i) => {
-        const isFirst = i === 0;
-        return `<button class="wc-tab${isFirst ? ' active' : ''}${t.disabled ? ' disabled' : ''}"
-                title="${t.disabled ? 'Próximamente' : t.label}"${t.disabled ? ' aria-disabled="true"' : ''}>
-            <span class="wc-year">${t.label}</span>
-            <span class="wc-status">${t.sub}</span>
-            ${t.disabled ? '<div class="lock-icon">BLOQUEADO</div>' : ''}
-        </button>`;
-    }).join('');
-    document.getElementById('wcPrev').disabled = currentTabIdx === 0;
-    document.getElementById('wcNext').disabled = currentTabIdx >= TABS.length - VISIBLE;
-}
+// function renderTabs() {
+//     const container = document.getElementById('wcTabsContainer');
+//     const visible = TABS.slice(currentTabIdx, currentTabIdx + VISIBLE);
+//     container.innerHTML = visible.map((t, i) => {
+//         const isFirst = i === 0;
+//         return `<button class="wc-tab${isFirst ? ' active' : ''}${t.disabled ? ' disabled' : ''}"
+//                 title="${t.disabled ? 'Próximamente' : t.label}"${t.disabled ? ' aria-disabled="true"' : ''}>
+//             <span class="wc-year">${t.label}</span>
+//             <span class="wc-status">${t.sub}</span>
+//             ${t.disabled ? '<div class="lock-icon">BLOQUEADO</div>' : ''}
+//         </button>`;
+//     }).join('');
+//     // document.getElementById('wcPrev').disabled = currentTabIdx === 0;
+//     // document.getElementById('wcNext').disabled = currentTabIdx >= TABS.length - VISIBLE;
+// }
 
-document.getElementById('wcPrev').addEventListener('click', () => {
-    if (currentTabIdx > 0) { currentTabIdx--; renderTabs(); }
-});
-document.getElementById('wcNext').addEventListener('click', () => {
-    if (currentTabIdx < TABS.length - VISIBLE) { currentTabIdx++; renderTabs(); }
-});
+// // document.getElementById('wcPrev').addEventListener('click', () => {
+// //     if (currentTabIdx > 0) { currentTabIdx--; renderTabs(); }
+// // });
+// // document.getElementById('wcNext').addEventListener('click', () => {
+// //     if (currentTabIdx < TABS.length - VISIBLE) { currentTabIdx++; renderTabs(); }
+// // });
 
-renderTabs();
+// renderTabs();
 // ─────────────────────────────────────────────────────────────────
 
 loadLayers();
